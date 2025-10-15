@@ -1,0 +1,248 @@
+* {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+}
+
+body {
+     font-family: 'Segoe UI', Arial, sans-serif;
+     line-height: 1.5;
+     background: #f8f9fa;
+     color: #1e2125;
+}
+
+header {
+     background: #222;
+     color: #fff;
+     padding: 12px 0;
+}
+
+nav {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     width: 90%;
+     margin: auto;
+}
+
+.logo {
+     font-size: 1.5rem;
+     font-weight: 600;
+     letter-spacing: 2px;
+}
+
+nav ul {
+     list-style-type: none;
+     display: flex;
+}
+
+nav ul li {
+     margin: 0 12px;
+}
+
+nav ul li a {
+     color: #fff;
+     text-decoration: none;
+     padding: 8px 12px;
+     border-radius: 5px;
+     transition: background 0.2s;
+}
+
+nav ul li a:hover {
+     background: #444;
+}
+
+.hero {
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: center;
+     padding: 48px 0 24px 0;
+     background: #e0e5eb;
+}
+
+.profile-img {
+     border-radius: 50%;
+     width: 160px;
+     height: 160px;
+     object-fit: cover;
+     border: 4px solid #fff;
+     margin: 24px;
+}
+
+.hero-content {
+     max-width: 600px;
+     margin: 16px;
+}
+
+.hero-content h1 {
+     font-size: 2rem;
+     margin-bottom: 8px;
+}
+.hero-content p {
+     font-size: 1.2rem;
+     color: #555;
+     min-height: 48px;
+}
+
+.links a {
+     color: #222;
+     font-size: 2rem;
+     margin-right: 20px;
+     transition: color 0.2s;
+}
+
+.links a:hover {
+     color: #0077b5;
+}
+
+section {
+     width: 90%;
+     margin: 32px auto;
+     padding: 20px 0;
+     background: #fff;
+     border-radius: 10px;
+     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+h2 {
+     margin-bottom: 16px;
+     font-size: 1.7rem;
+     color: #0077b5;
+}
+
+.education-list li {
+     margin: 12px 0;
+}
+
+.projects-grid {
+     display: grid;
+     /* grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+     gap: 20px; */
+     grid-template-columns: repeat(3, 1fr);
+          /* 3 items per row */
+          gap: 20px;
+          /* space between items */
+}
+
+.project-item {
+     padding: 12px;
+     border: 1px solid #ccc;
+     border-radius: 8px;
+     background: #fafaff;
+}
+
+.project-item h3 {
+     margin-bottom: 8px;
+}
+
+footer {
+     background: #222;
+     color: #fff;
+     text-align: center;
+     padding: 16px 0;
+     margin-top: 32px;
+}
+
+@media (max-width: 700px) {
+     .hero {
+          flex-direction: column;
+          text-align: center;
+     }
+
+     nav ul {
+          flex-direction: column;
+          gap: 4px;
+     }
+
+     .projects-grid {
+          grid-template-columns: 1fr;
+     }
+}
+.mobile-menu-btn {
+     display: none;
+     background: #0077b5;
+     color: #fff;
+     border: none;
+     font-size: 2rem;
+     padding: 6px 14px;
+     border-radius: 7px;
+     margin-right: 14px;
+     cursor: pointer;
+}
+
+.scroll-top {
+     position: fixed;
+     right: 20px;
+     bottom: 32px;
+     padding: 12px 18px;
+     font-size: 1.4rem;
+     background: #0077b5;
+     color: #fff;
+     border: none;
+     border-radius: 50%;
+     display: none;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+     cursor: pointer;
+     z-index: 99;
+}
+
+@media (max-width: 700px) {
+     .mobile-menu-btn {
+          display: block;
+     }
+
+     nav ul {
+          display: none;
+          flex-direction: column;
+          background: #333;
+          padding: 14px 0;
+          position: absolute;
+          top: 50px;
+          right: 0;
+          width: 180px;
+          border-radius: 8px;
+     }
+
+     nav ul.show-mobile {
+          display: flex;
+     }
+}
+#skills {
+     padding: 2rem;
+     /* text-align: center; */
+}
+
+.skills-list {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 1rem;
+     margin-top: 1rem;
+}
+
+.skill {
+     background-color: #f0f0f0;
+     padding: 0.5rem 1rem;
+     border-radius: 20px;
+     font-weight: bold;
+     transition: transform 0.3s, background-color 0.3s;
+}
+
+.skill:hover {
+     background-color: #007bff;
+     color: #fff;
+     transform: scale(1.1);
+}
+#about{
+     padding: 2rem;
+}
+#education{
+     padding: 2rem;
+}
+#projects{
+     padding: 2rem;
+}
+#contact{
+     padding: 2rem;
+}
